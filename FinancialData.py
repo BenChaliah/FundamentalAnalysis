@@ -157,6 +157,6 @@ class financial_data:
 
 if __name__ == "__main__":
 	iex = financial_data()
-	print(m.get_news(['AAPL']))
+	print(iex.get_news(['AAPL']))
 	print(iex.get_trade_bars(['AAPL', 'IBM']))
 
