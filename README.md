@@ -12,9 +12,6 @@
 from FinancialData import financial_data
 iex = financial_data()
 print(iex.get_trade_bars(['AAPL'], '1m')[:10])
-```
-
-```python
 print(iex.get_news(['AAPL', 'MSFT'])[['symbol','time','headline']][:10])
 ```
 
