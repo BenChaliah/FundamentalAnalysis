@@ -18,15 +18,6 @@ print(iex.get_trade_bars(['AAPL'], '1m')[:10])
 print(iex.get_news(['AAPL', 'MSFT'])[['symbol','time','headline']][:10])
 ```
 
-<pre>  symbol                      time  \
-0   AAPL 2019-04-27 09:12:19-04:00   
-1   MSFT 2019-04-26 23:24:51-04:00   
-
-                                            headline  
-0  Stocks To Watch: Eyes On Apple, Uber, F8 And A...  
-1  Azure And The Cloud Have Reinvigorated...  
-</pre>
-
 
 ```python
 # list(iex.all_ticker()) : list off all valid securities' symbols
@@ -48,7 +39,7 @@ news = pd.read_excel('assets/news.xlsx', index_col=0)
 absolute_thresh = pd.Timestamp(datetime.today().date()-timedelta(days=37))
 news = pd.read_excel('assets/news.xlsx', index_col=0)
 news = news.loc[news['time']>=absolute_thresh]
-news[['symbol', 'time', 'headline', 'summary']].head()
+news[['symbol', 'time', 'headline', 'summary']].head(2)
 ```
 
 <table border="1" class="dataframe">
@@ -70,32 +61,11 @@ news[['symbol', 'time', 'headline', 'summary']].head()
       <td>I'm a huge fan of dividend growth stocks an...</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>1/th>
       <td>ALTM</td>
       <td>2019-04-12 21:27:00</td>
       <td>FERC clears EPIC pipeline rates, three others ...</td>
       <td>The 550K bbl/day EPIC pipeline  wins appr...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>ALTM</td>
-      <td>2019-03-31 20:26:45</td>
-      <td>Midstream Lollygags Into Quarter End</td>
-      <td>Stock prices across midstream were little c...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>ALTM</td>
-      <td>2019-03-24 12:54:34</td>
-      <td>Midstream Marches Higher</td>
-      <td>The broad market crapped out Friday after r...</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>ATRI</td>
-      <td>2019-04-03 20:50:37</td>
-      <td>The Most Undervalued And Overvalued Dividend C...</td>
-      <td>In June of 2015, I started a series of arti...</td>
     </tr>
   </tbody>
 </table>
