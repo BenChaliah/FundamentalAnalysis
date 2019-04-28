@@ -51,6 +51,56 @@ news = news.loc[news['time']>=absolute_thresh]
 news[['symbol', 'time', 'headline', 'summary']].head()
 ```
 
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>symbol</th>
+      <th>time</th>
+      <th>headline</th>
+      <th>summary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>KAI</td>
+      <td>2019-04-04 16:25:54</td>
+      <td>12 Upcoming Dividend Increases</td>
+      <td>I'm a huge fan of dividend growth stocks an...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ALTM</td>
+      <td>2019-04-12 21:27:00</td>
+      <td>FERC clears EPIC pipeline rates, three others ...</td>
+      <td>The 550K bbl/day EPIC pipeline  wins appr...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ALTM</td>
+      <td>2019-03-31 20:26:45</td>
+      <td>Midstream Lollygags Into Quarter End</td>
+      <td>Stock prices across midstream were little c...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ALTM</td>
+      <td>2019-03-24 12:54:34</td>
+      <td>Midstream Marches Higher</td>
+      <td>The broad market crapped out Friday after r...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>ATRI</td>
+      <td>2019-04-03 20:50:37</td>
+      <td>The Most Undervalued And Overvalued Dividend C...</td>
+      <td>In June of 2015, I started a series of arti...</td>
+    </tr>
+  </tbody>
+</table>
+
+
 ```python
 # This function uses Yahoo Finance to market data
 def get_market(security, start_date, end_date):
