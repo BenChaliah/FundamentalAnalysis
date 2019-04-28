@@ -53,3 +53,45 @@ def get_market(security, start_date, end_date):
 get_market('AAPL', intervals_[0][0], intervals_[0][1])
 ```
 
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Open</th>
+      <th>Close</th>
+      <th>Volume</th>
+      <th>Adj Close</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2019-03-21</th>
+      <td>196.330002</td>
+      <td>189.809998</td>
+      <td>190.020004</td>
+      <td>195.089996</td>
+      <td>51034200</td>
+      <td>195.089996</td>
+    </tr>
+    <tr>
+      <th>2019-03-22</th>
+      <td>197.690002</td>
+      <td>190.779999</td>
+      <td>195.339996</td>
+      <td>191.050003</td>
+      <td>42407700</td>
+      <td>191.050003</td>
+    </tr>
+  </tbody>
+</table>
