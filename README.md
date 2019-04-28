@@ -1,4 +1,4 @@
-# Stock market forecasting : Fundamental Analysis
+# Stock market forecasting : Fundamental analysis
 
 Many market analysts believe that predicting market’s stocks fluctuations is nearly impossible to achieve due to the number of variables involved, especially since many of these variables are based on irrational factors such as human sentiment, with intricately hard to model interactions between them.
 
