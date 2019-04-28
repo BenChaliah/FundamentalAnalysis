@@ -26,23 +26,33 @@ def approximate_sentiment(seq1, words_ref):
 				syn.append(lemma.name())
 				if lemma.antonyms():
 					ant.append(lemma.antonyms()[0].name())
+		tmp_corpus = []
 		for i in syn:
 			sent_ = sia.polarity_scores(i)['compound']
 			if abs(sent_):
-				return sent_
+				tmp_corpus.append(sent_)
+			if sum([1 for i in tmp_corpus if i>0])>len(tmp_corpus)/2:
+				return np.mean([i for i in tmp_corpus if i>0])
+			elif sum([1 for i in tmp_corpus if i<0])>len(tmp_corpus)/2:
+				return np.mean([i for i in tmp_corpus if i<0])
+		tmp_corpus = []
 		for i in ant:
 			sent_ = sia.polarity_scores(i)['compound']
 			if abs(sent_):
-				return -1*sent_
+				tmp_corpus.append(sent_)
+			if sum([1 for i in tmp_corpus if i>0])>len(tmp_corpus)/2:
+				return -1*np.mean([i for i in tmp_corpus if i>0])
+			elif sum([1 for i in tmp_corpus if i<0])>len(tmp_corpus)/2:
+				return -1*np.mean([i for i in tmp_corpus if i<0])
 		for j in words_ref[:0]:
 			if j[:2]=="un":
 				j = j[:2]
 			lexicon_.append(SequenceMatcher(None, seq1, j).ratio())
 		if max(lexicon_)>=0.85:
 			resp_ = words_ref[lexicon_.index(max(lexicon_))]
-			if resp_[:2]=="un" or resp_[:2]=="in":
+			if resp_[:2] in ["un", "in"]:
 				seq1 = resp_
-
+	return 0
 
 def absolute_distance(seq1):
 	seq1 = seq1.replace("-","")
