@@ -61,7 +61,7 @@ news[['symbol', 'time', 'headline', 'summary']].head(2)
       <td>I'm a huge fan of dividend growth stocks an...</td>
     </tr>
     <tr>
-      <th>1/th>
+      <th>1</th>
       <td>ALTM</td>
       <td>2019-04-12 21:27:00</td>
       <td>FERC clears EPIC pipeline rates, three others ...</td>
