@@ -1,7 +1,7 @@
 # Stock market forecasting : Fundamental analysis
 
 
-<a href="https://github.com/BenChaliah/FundamentalAnalysis/raw/master/Report.pdf">Theoretical report</a>
+<a href="https://github.com/BenChaliah/FundamentalAnalysis/blob/master/Report.pdf">Theoretical report</a>
 <br />
 <a href="https://github.com/BenChaliah/FundamentalAnalysis/blob/master/notebook.ipynb">Experimental report</a>
 
