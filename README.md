@@ -18,6 +18,16 @@ print(iex.get_trade_bars(['AAPL'], '1m')[:10])
 print(iex.get_news(['AAPL', 'MSFT'])[['symbol','time','headline']][:10])
 ```
 
+<pre>  symbol                      time  \
+0   AAPL 2019-04-27 09:12:19-04:00   
+1   MSFT 2019-04-26 23:24:51-04:00   
+
+                                            headline  
+0  Stocks To Watch: Eyes On Apple, Uber, F8 And A...  
+1  Azure And The Cloud Have Reinvigorated...  
+</pre>
+
+
 ```python
 # list(iex.all_ticker()) : list off all valid securities' symbols
 # This step could take a while, considering that this API provides 8750 security's related news
