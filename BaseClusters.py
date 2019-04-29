@@ -45,7 +45,7 @@ def approximate_sentiment(seq1, words_ref):
 		elif sum([1 for i in tmp_corpus if i<0])>len(tmp_corpus)/2:
 			return -1*np.mean([i for i in tmp_corpus if i<0])
 		for j in words_ref[:0]:
-			if j[:2]=="un":
+			if j[:2] in ["un", "in"]:
 				j = j[:2]
 			lexicon_.append(SequenceMatcher(None, seq1, j).ratio())
 		if max(lexicon_)>=0.85:
