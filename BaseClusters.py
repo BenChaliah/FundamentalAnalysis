@@ -31,19 +31,19 @@ def approximate_sentiment(seq1, words_ref):
 			sent_ = sia.polarity_scores(i)['compound']
 			if abs(sent_):
 				tmp_corpus.append(sent_)
-			if sum([1 for i in tmp_corpus if i>0])>len(tmp_corpus)/2:
-				return np.mean([i for i in tmp_corpus if i>0])
-			elif sum([1 for i in tmp_corpus if i<0])>len(tmp_corpus)/2:
-				return np.mean([i for i in tmp_corpus if i<0])
+		if sum([1 for i in tmp_corpus if i>0])>len(tmp_corpus)/2:
+			return np.mean([i for i in tmp_corpus if i>0])
+		elif sum([1 for i in tmp_corpus if i<0])>len(tmp_corpus)/2:
+			return np.mean([i for i in tmp_corpus if i<0])
 		tmp_corpus = []
 		for i in ant:
 			sent_ = sia.polarity_scores(i)['compound']
 			if abs(sent_):
 				tmp_corpus.append(sent_)
-			if sum([1 for i in tmp_corpus if i>0])>len(tmp_corpus)/2:
-				return -1*np.mean([i for i in tmp_corpus if i>0])
-			elif sum([1 for i in tmp_corpus if i<0])>len(tmp_corpus)/2:
-				return -1*np.mean([i for i in tmp_corpus if i<0])
+		if sum([1 for i in tmp_corpus if i>0])>len(tmp_corpus)/2:
+			return -1*np.mean([i for i in tmp_corpus if i>0])
+		elif sum([1 for i in tmp_corpus if i<0])>len(tmp_corpus)/2:
+			return -1*np.mean([i for i in tmp_corpus if i<0])
 		for j in words_ref[:0]:
 			if j[:2]=="un":
 				j = j[:2]
